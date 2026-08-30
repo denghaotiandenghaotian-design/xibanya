@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>法语学习辅助系统 v1.0 · Français Assistant</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- 侧边栏 -->
+<aside id="sidebar">
+  <div class="brand">
+    <div class="brand-flag"><span></span><span></span><span></span></div>
+    <div class="brand-text">
+      <strong>法语学习辅助系统</strong>
+      <small>Français Assistant · v1.0</small>
+    </div>
+  </div>
+
+  <nav id="nav">
+    <button class="nav-item active" data-mod="dashboard"><span class="ni">◈</span>总览 / 全局设置</button>
+    <div class="nav-group">模块一 · 考点库管理</div>
+    <button class="nav-item" data-mod="m1"><span class="ni">①</span>考点库管理 (P1-1~P1-4)</button>
+    <div class="nav-group">模块二 · 复习计划</div>
+    <button class="nav-item" data-mod="m2"><span class="ni">②</span>复习计划生成 (P2-1~P2-4)</button>
+    <div class="nav-group">模块三 · 思维导图</div>
+    <button class="nav-item" data-mod="m3"><span class="ni">③</span>知识点思维导图 (P3-1~P3-3)</button>
+    <div class="nav-group">模块四 · 背诵打卡</div>
+    <button class="nav-item" data-mod="m4"><span class="ni">④</span>背诵打卡 (P4-1~P4-3)</button>
+    <div class="nav-group">模块五 · 口语练习</div>
+    <button class="nav-item" data-mod="m5"><span class="ni">⑤</span>口语练习 (P5-1~P5-3)</button>
+    <div class="nav-group">模块六 · 听力训练</div>
+    <button class="nav-item" data-mod="m6"><span class="ni">⑥</span>日常听力训练 (P6-1~P6-3)</button>
+    <div class="nav-group">模块七 · 字母表与键盘</div>
+    <button class="nav-item" data-mod="m7"><span class="ni">⑦</span>字母表与键盘</button>
+    <div class="nav-group">模块八 · 情景板块</div>
+    <button class="nav-item" data-mod="m8"><span class="ni">⑧</span>情景板块（12 情景）</button>
+    <div class="nav-group">模块九 · 单词学习</div>
+    <button class="nav-item" data-mod="m9"><span class="ni">🔤</span>单词学习</button>
+    <div class="nav-group">模块十 · 句子学习</div>
+    <button class="nav-item" data-mod="m10"><span class="ni">💡</span>句子学习</button>
+    <div class="nav-group">模块十一 · 每日一练</div>
+    <button class="nav-item" data-mod="m11"><span class="ni">📅</span>每日一练</button>
+    <div class="nav-group">模块十二 · 自测中心</div>
+    <button class="nav-item" data-mod="m12"><span class="ni">🎯</span>自测中心</button>
+  </nav>
+
+  <div class="sidebar-foot">
+    <div id="globalBadge" class="global-badge">未设置学习目标</div>
+    <button id="resetBtn" class="mini-btn" title="清空本地数据">清空本地数据</button>
+  </div>
+</aside>
+
+<!-- 主区 -->
+<main id="main">
+  <header id="topbar">
+    <button id="menuToggle" aria-label="菜单">☰</button>
+    <div id="topTitle">总览 / 全局设置</div>
+    <div id="topMeta"></div>
+  </header>
+  <section id="view"><!-- 模块渲染区 --></section>
+</main>
+
+<!-- 全局设置弹层 -->
+<div id="settingsModal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>全局参数设置（对应提示词 0.0）</h3>
+      <button class="close-x" data-close>×</button>
+    </div>
+    <div class="modal-body" id="settingsBody"></div>
+    <div class="modal-foot">
+      <button class="btn ghost" data-close>取消</button>
+      <button class="btn primary" id="saveSettings">保存</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<!-- 脚本（经典 script，file:// 直接可用，无需构建/服务器） -->
+<script src="assets/js/data/knowledge.js"></script>
+<script src="assets/js/data/textbooks.js"></script>
+<script src="assets/js/data/scenarios.js"></script>
+<script src="assets/js/data/listening.js"></script>
+<script src="assets/js/data/grammar.js"></script>
+<script src="assets/js/data/vocab.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/modules/m1.js"></script>
+<script src="assets/js/modules/m2.js"></script>
+<script src="assets/js/modules/m3.js"></script>
+<script src="assets/js/modules/m4.js"></script>
+<script src="assets/js/modules/m5.js"></script>
+<script src="assets/js/modules/m6.js"></script>
+<script src="assets/js/modules/m7.js"></script>
+<script src="assets/js/modules/m8.js"></script>
+<script src="assets/js/modules/m9.js"></script>
+<script src="assets/js/modules/m10.js"></script>
+<script src="assets/js/modules/m11.js"></script>
+<script src="assets/js/modules/m12.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
